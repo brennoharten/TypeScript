@@ -39,17 +39,16 @@ function placeOrder(pizza: Pizza): Order | undefined {
 
 
 
-/**
- * Challenge: add types our generic `addToArray` function. It should work
- * for adding new pizzas to the `menu` and adding new orders to the `orderQueue`
- */
 
 function addToArray<T>(array: T[], item: T): T[] {
     array.push(item)
     return array
 }
 
-// example usage:
+/**
+ * Mini-challenge: what should be passed in as the generic type on line 53?
+ */
+
 addToArray<Pizza>(menu, {id: nextPizzaId++, name: "Chicken Bacon Ranch", price: 12 })
 addToArray<Order>(orderQueue, { id: nextOrderId++, pizza: menu[2], status: "completed" })
 
